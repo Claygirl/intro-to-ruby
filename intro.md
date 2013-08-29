@@ -27,7 +27,7 @@ Turtle.start do
 end
 ```
 
-Neat, huh?! But we can certainly do better than that. Square would be even better. We will need to make some turns in the process, let's see how this looks like.
+Neat, huh?! But we can certainly do better than that. Square is a thing we're going for. We will need to make some turns in the process, let's see how this looks like.
 
 ```ruby
 Turtle.start do
