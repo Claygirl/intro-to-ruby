@@ -1,7 +1,7 @@
 Intro to Ruby
 =============
 
-Meet Mr. Turtle! Apart from being a legitimate turtle, he's a Ruby object. And he has some pretty serious artistic talent. Thanks to Mr. Turle will learn how to interact with objects in Ruby (yes! how to program stuff!) and draw some clever shapes.
+Meet Mr. Turtle! Apart from being a legitimate turtle, he's a Ruby object. And he has some pretty serious artistic talent. Thanks to Mr. Turle will learn how to interact with objects in Ruby (yes! this means programming stuff!) and how to draw some clever shapes.
 
 The very basic concept in Ruby is that everything is an object. We will learn what this means exactly in a little while, but for now it's important to keep in mind that _everything_ is an object here. 
 
@@ -9,10 +9,45 @@ Every object has some properties - talents and Mr. Turtle here draws. They all a
 
 First step
 -------------
+Mr. Turtle will cooperate eagerly and draw whatever you want, but only if you command him in a very precise and specific way. This applies to all programming activities - your programme will run great as far as you follow basic rules.
+
+Here, the proper way to say something to Mr. Turtle is to put it inside the following block:
+
+```ruby
+Turtle.start do
+  // your code goes here
+end
+```
+
+Everything in the block will be executed by the turtle. For the first example, let's just draw 100 pixels of a straight line. Type in the code into the editor and hit "Run" at the bottom.
+
+```ruby
+Turtle.start do
+  forward 100
+end
+```
+
+Neat, huh?! But we can certainly do better than that. Square would be even better. We will need to make some turns in the process, let's see how this looks like.
+
+```ruby
+Turtle.start do
+  forward 100
+  turnright 90
+  forward 100
+  turnright 90
+  forward 100
+  turnright 90
+  forward 100
+end
+```
+
+For the record - yes, Mr. turtle also turns left if you wish to.
+
+Square was ok, but can you make a triangle?
 
 Variables
 -------------
-Turtle will draw a spiral.
+Good job on your first triangle! You're definitely ready to take the next step.
 
 ```ruby
 Turtle.start do
