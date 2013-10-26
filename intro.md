@@ -45,25 +45,32 @@ For the record - yes, Mr. turtle also turns left if you wish to.
 
 Square was ok, but can you make a triangle?
 
-Variables
+Loop
 -------------
 Good job on your first triangle! You're definitely ready to take the next step.
 
+Making a square wasn't so difficult but why repeat ourselves. We wrote
+
+```ruby
+  forward 100
+  turnright 90
+```
+4 times. Instead we can tell Mr. Turtle 'Could you 4 times do the following: go forward 100 pixels and turnright 90 degrees?'
+How would it look like in Mr. Turtle language?
+
 ```ruby
 Turtle.start do
-  i = 0
-  40.times do
-    forward 10
-    forward i
+  4.times do
+    forward 100
     turnright 90
-    i += 10
   end
 end
 ```
 
-Loop
--------------
-Greek-like pattern.
+Almost like in our plain English sentence, isn't it?
+Could you ask Mr. Turtle to draw octagon without repeating yourself?
+
+Good job! Let's do greek-like pattern.
 
 ```ruby
 Turtle.start do
@@ -83,6 +90,41 @@ Turtle.start do
   end
 end
 ```
+
+Variables
+-------------
+What if we want Mr. Turtle to draw line longer (for example 10 pixels) in every next step?
+We could count it in memory and write something like this:
+
+```ruby
+Turtle.start do
+    forward 10
+    turnright 90
+    forward 20
+    turnright 90
+    forward 30
+    turnright 90
+    // etc until we're done
+  end
+end
+```
+That's pretty exhausting. Looks like we're not repeating ourselves so we can't take it into the loop. That's tha moment when variables step in!
+'i' would be our increase of the step and we will change it in every step starting from zero.
+
+```ruby
+Turtle.start do
+  i = 0
+  40.times do
+    forward 10
+    forward i
+    turnright 90
+    i += 10
+  end
+end
+```
+Nice trick, a little code that is doing complexed snail.
+Or maybe it's just a shell of a snail. Could you draw him a body? Simple rectangular in the bottom would make it more similar to snail.
+Hint: to turn left use command: turnleft. And remeber to tell Mr. Turtle to turn to the right direction before the next step!
 
 Conditionals
 -------------
